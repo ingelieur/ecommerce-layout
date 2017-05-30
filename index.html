@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online bookstore">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Renaissains: High Quality Books, High Quality You</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div class="r-navbar">
+      <div class="navbar">
+        <nav class="white z-depth-0">
+          <div class="nav-wrapper container">
+            <a href="#!" class="brand-logo black-text logo-wrapper"><img src="images/renaissains-logo.png" alt="" width=45%></a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a class="black-text" href="">Wishlist</a></li>
+                <li><a class="black-text" href="">Sign in/Join</a></li>
+                <li><a class="black-text" href="">Cart</a></li>
+              </ul>
+              <ul class="side-nav right" id="mobile-demo">
+                <li><a href="">Wishlist</a></li>
+                <li><a href="">Sign in/Join</a></li>
+                <li><a href="">Cart</a></li>
+              </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="orange lighten-2">
+      <div class="container flex-container valign-wrapper">
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-button btn-large white black-text flex-item' href='#' data-activates='dropdown1'>Categories</a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!"class="black-text">Fiction</a></li>
+          <li><a href="#!"class="black-text">Non-fiction</a></li>
+          <li><a href="#!"class="black-text">Gifts</a></li>
+        </ul>
+        <div class="flex-item">
+          <form>
+            <div class="input-field">
+              <input id="search" type="text" placeholder="Search" required>
+            </div>
+          </form>
+          <main>
+          <!--
+            <form class="" action="" method="">
+            <div class="input-field inline flex-item">
+            <input id="search" type="search" placehoder="Search">
+            <a href=""><i class="material-icons">search</i></a>
+            <button type="submit"><i class="material-icons">search</i></button>
+            </div>
+            </form>
+          -->
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-item" href="">
+        <img src="images/quote-one.jpg" alt="">
+      </div>
+      <div class="carousel-item amber white-text" href="#two!">
+        <img src="images/quote-two.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/ray-bradbury.jpg" height=200px width=auto>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
+            </div>
+            <div class="card-content">
+              <p class="book-title">Fahrenheit 451</p>
+              <p class="book-author">Ray Bradbury</p>
+              <br>
+              <p class="book-price white-text">IDR 237000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/jonathan-haidt.jpg" height=200px width=auto>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
+            </div>
+            <div class="card-content">
+              <p class="book-title">The Righteous Mind</p>
+              <p class="book-author">Jonathan Haidt</p>
+              <br>
+              <p class="book-price white-text">IDR 434000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/etgar-keret.jpg" height=200px width=auto>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
+            </div>
+            <div class="card-content">
+              <p class="book-title">The Bus Driver who Wanted to be God</p>
+              <p class="book-author">Etgar Keret</p>
+              <br>
+              <p class="book-price white-text">IDR 181000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/zeynep-tufekci.jpg" height=200px width=auto>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
+            </div>
+            <div class="card-content">
+              <p class="book-title">Twitter and Tear Gas</p>
+              <p class="book-author">Zeynep Tufekci</p>
+              <br>
+              <p class="book-price white-text">IDR 339000 </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          </main>
+          <footer class="page-footer orange lighten-1">
+            <div class="footer-copyright orange lighten-4">
+              <div class="container black-text">
+                © 2014 Renaissains
+                <a class="black-text text-lighten-4 right" href="#!">Follow Us</a>
+              </div>
+            </div>
+          </footer>
+
+          <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+          <script src="scripts.js"></script>
+  </body>
+</html>
