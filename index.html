@@ -2,135 +2,330 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Online bookstore">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Renaissains: High Quality Books, High Quality You</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <title>Renaissains - High Quality Books, High Quality You</title>
   </head>
   <body>
-    <div class="r-navbar">
-      <div class="navbar">
-        <nav class="white z-depth-0">
-          <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo black-text logo-wrapper"><img src="images/renaissains-logo.png" alt="" width=45%></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a class="black-text" href="">Wishlist</a></li>
-              <li><a class="black-text" href="">Sign in/Join</a></li>
-              <li><a class="black-text" href="checkout.html">Cart</a></li>
-            </ul>
-            <ul class="side-nav right" id="mobile-demo">
-              <li><a href="">Wishlist</a></li>
-              <li><a href="">Sign in/Join</a></li>
-              <li><a href="">Cart</a></li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="nav has-shadow">
+      <div class="nav-left">
+        <a class="nav-item" href="index.html">
+          <img src="/images/renaissains-logo.png" alt="Renaissains logo">
+        </a>
       </div>
-    </div>
-    <div class="orange lighten-2">
-      <div class="container flex-container valign-wrapper">
-        <!-- Dropdown Trigger -->
-        <a class='dropdown-button btn-large white black-text flex-item' href='#' data-activates='dropdown1'>Categories</a>
-        <!-- Dropdown Structure -->
-        <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="#!"class="black-text">Fiction</a></li>
-          <li><a href="#!"class="black-text">Non-fiction</a></li>
-          <li><a href="#!"class="black-text">Gifts</a></li>
-        </ul>
-        <div class="flex-item">
-          <form>
-            <div class="input-field">
-              <input id="search" type="text" placeholder="Search" required>
-            </div>
-          </form>
+
+      <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+      <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+      <!-- This "nav-menu" is hidden on mobile -->
+      <!-- Add the modifier "is-active" to display it on mobile -->
+      <div class="nav-right nav-menu">
+        <a class="nav-item black">Sign in/Join</a>
+        <div class="nav-item">
+          <a class="button is-primary is-outlined modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
         </div>
       </div>
-    </div>
-    <div class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-item" href="">
-        <img src="images/quote-one.jpg" alt="">
+    </nav>
+    <section class="hero box">    
+      <div class="search-section level">
+        <div class="level-item has-text-centered">
+          <a class="title" href='#categories'>Our Collections</a>
+        </div>
+        <div class="level-item has-text-centered">
+          <div class="field has-addons">
+            <p class="control">
+            <input class="input" type="text" placeholder="Search item">
+            </p>
+            <p class="control">
+            <a class="button is-primary">Search</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item amber white-text" href="#two!">
-        <img src="images/quote-two.jpg" alt="">
-      </div>
-    </div>
+    </section>
 
     <div class="container">
-      <div class="row">
-        <div class="col s12 m6 l3">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/ray-bradbury.jpg" height=200px width=auto>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
-            </div>
-            <div class="card-content">
-              <p class="book-title">Fahrenheit 451</p>
-              <p class="book-author">Ray Bradbury</p>
-              <br>
-              <p class="book-price white-text">IDR 237000</p>
-            </div>
+      <div class="tile is-ancestor">
+        <div class="tile is-8 is-parent">
+          <div class="tile is-child">
+            <figure class="image" style="margin-top:10px">
+              <img src="/images/banner-long.jpg" alt="">
+            </figure>
           </div>
         </div>
-        <div class="col s12 m6 l3">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/jonathan-haidt.jpg" height=200px width=auto>
-              <a class="btn-floating halfway-fab waves-effect waves-light red" href=""><i class="material-icons">shopping_cart</i></a>
-            </div>
-            <div class="card-content">
-              <p class="book-title">The Righteous Mind</p>
-              <p class="book-author">Jonathan Haidt</p>
-              <br>
-              <p class="book-price white-text">IDR 434000</p>
-            </div>
+        <div class="tile is-parent is-vertical">
+          <div class="tile is-child">
+            <figure class="image">
+              <img src="/images/banner-1.jpg" alt="">
+            </figure>
           </div>
-        </div>
-        <div class="col s12 m6 l3">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/etgar-keret.jpg" height=200px width=auto>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
-            </div>
-            <div class="card-content">
-              <p class="book-title">The Bus Driver who Wanted to be God</p>
-              <p class="book-author">Etgar Keret</p>
-              <br>
-              <p class="book-price white-text">IDR 181000</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l3">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/zeynep-tufekci.jpg" height=200px width=auto>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">shopping_cart</i></a>
-            </div>
-            <div class="card-content">
-              <p class="book-title">Twitter and Tear Gas</p>
-              <p class="book-author">Zeynep Tufekci</p>
-              <br>
-              <p class="book-price white-text">IDR 339000 </p>
-            </div>
+          <div class="tile is-child">
+            <figure class="image">
+              <img src="/images/banner-2.jpg" alt="">
+            </figure>
           </div>
         </div>
       </div>
     </div>
-    <footer class="page-footer orange lighten-1">
-      <div class="footer-copyright orange lighten-4">
-        <div class="container black-text">
-          © 2014 Renaissains
-          <a class="black-text text-lighten-4 right" href="#!">Follow Us</a>
+    <br/><br/>
+    <div id="categories" class="tabs is-centered is-boxed is-medium">
+      <ul>
+        <li class="is-active">
+          <a href="">Fiction</a>
+        </li>
+        <li>
+          <a href="">Non-Fiction</a>
+        </li>
+        <li>
+          <a href="">Gifts</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="card bm--card-equal-height">
+            <div class="card-image">
+              <figure class="image">
+                <img src="/images/jonathan-haidt.jpg" alt="Image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered">
+                <p class="subtitle">The Righteous Mind</p>
+                <p class="subtitle">Jonathan Haidt</p>
+                <br>
+                <p class="title">170000</p>
+                <small>stock: 50</small>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item"><i class="fa fa-book fa-lg"></i>&nbsp;Details</a>
+              <a class="card-footer-item modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/><br/>
+    <div id="modal-ter"class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Cart</p>
+          <button class="delete"></button>
+        </header>
+        <section class="modal-card-body">
+          <table class="table is-striped">
+            <thead>
+              <tr>
+                <th colspan="2">Title</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><img src="/images/jonathan-haidt.jpg" alt=""> </th>
+                <th>The Righteous Mind</th>
+                <th>170000</th>
+                <th>2</th>
+                <th>340000</th>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th></th>
+                <th colspan="2">Total Price</th>
+                <th>340000</th>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+        <footer class="modal-card-foot">
+          <a class="button" href="/#">Continue Shopping</a>
+          <a class="button is-danger" href="/checkout.html">Proceed to Checkout</a>
+        </footer>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p><strong>Renaissains</strong> by <a href="http://esviai.com">Shabrina V. Inmas</a></p>
         </div>
       </div>
     </footer>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="scripts.js"></script>
+    <script type="text/javascript" src="./scripts.js"></script>
   </body>
 </html>

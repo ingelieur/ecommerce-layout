@@ -2,99 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Online bookstore">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Renaissains: High Quality Books, High Quality You</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <title>Renaissains - High Quality Books, High Quality You</title>
   </head>
   <body>
-    <div class="r-navbar">
-      <div class="navbar">
-        <nav class="white z-depth-0">
-          <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo black-text logo-wrapper"><img src="images/renaissains-logo.png" alt="" width=45%></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a class="black-text" href="">Wishlist</a></li>
-              <li><a class="black-text" href="">Sign in/Join</a></li>
-              <li><a class="black-text" href="">Cart</a></li>
-            </ul>
-            <ul class="side-nav right" id="mobile-demo">
-              <li><a href="">Wishlist</a></li>
-              <li><a href="">Sign in/Join</a></li>
-              <li><a href="">Cart</a></li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="nav has-shadow">
+      <div class="nav-left">
+        <a class="nav-item" href="index.html">
+          <img src="/images/renaissains-logo.png" alt="Renaissains logo">
+        </a>
       </div>
-    </div>
-    <div class="container">
-      <div class="row center">
-        <h3>CART</h3>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col s6 offset-s3">
-          <table class="striped">
-            <thead>
-              <tr>
-                <th colspan="2" class="center">Book Title</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Remove</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><img src="images/zeynep-tufekci.jpg" alt="" height=100px></td>
-                <td>Twitter and Tear Gas</td>
-                <td>339000</td>
-                <td>1</td>
-                <td><i class="material-icons">delete</i> </td>
-              </tr>
-              <tr>
-                <td><img src="images/jonathan-haidt.jpg" alt="" height=100px></td>
-                <td>The Righteous Mind</td>
-                <td>434000</td>
-                <td>1</td>
-                <td><i class="material-icons">delete</i> </td>
-              </tr>
-              <tr>
-                <td colspan=2 class="center"><strong>Total Price</strong></td>
-                <td></td>
-                <td><strong>773000</strong></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <br/><br/>
-    <div class="container">
-      <div class="row center">
-        <a href="index.html" class="btn-large orange lighten-2">Back to Shopping</a>
-        <a href="" class="btn-large orange">Proceed to Payment</a>
-      </div>
-    </div>
-    <br/><br/>
-      <footer class="page-footer orange lighten-1">
-        <div class="footer-copyright orange lighten-4">
-          <div class="container black-text">
-            © 2014 Renaissains
-            <a class="black-text text-lighten-4 right" href="#!">Follow Us</a>
-          </div>
-        </div>
-      </footer>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="scripts.js"></script>
+      <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+      <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+      <!-- This "nav-menu" is hidden on mobile -->
+      <!-- Add the modifier "is-active" to display it on mobile -->
+      <div class="nav-right nav-menu">
+        <a class="nav-item black">Sign in/Join</a>
+        <div class="nav-item">
+          <a class="button is-primary is-outlined modal-button" data-target="#modal-ter"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Cart</a>
+        </div>
+      </div>
+    </nav>
+    <section class="hero box">    
+      <div class="search-section level">
+        <div class="level-item has-text-centered">
+          <p class="title">Check Out</p>
+        </div>
+      </div>
+    </section>
+    <br/><br/>
+    <div class="container">
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th colspan="2">Title</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><img src="/images/jonathan-haidt.jpg" alt="" style="max-height:100px;"> </th>
+            <th>The Righteous Mind</th>
+            <th>170000</th>
+            <th>2</th>
+            <th>340000</th>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th colspan="2">Total Price</th>
+            <th>340000</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <br/><br/>
+    <div class="container has-text-centered">
+      <a class="button is-primary" href="/#">Continue Shopping</a>
+      <a class="button is-danger" href="/#">Proceed to Payment</a>
+    </div>
+    <br/><br/>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p><strong>Renaissains</strong> by <a href="http://esviai.com">Shabrina V. Inmas</a></p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./scripts.js"></script>
   </body>
 </html>
